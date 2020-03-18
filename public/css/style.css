@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Open+Sans&display=swap');
 body{
     color: #666666;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, sans-serif;
     max-width: 650px;
     min-height: 100vh;
     margin: 0 auto;
@@ -18,18 +19,23 @@ footer{
     color: #888888;
     margin-top: 16px;
     padding: 16px 0;
+    font-family: 'Open Sans';
 }
 
 header{
     margin-top: 16px;
     margin-bottom: 48px;
     text-align: center;
+    font-family: 'Open Sans';
 }
 h1{
+    font-family: Montserrat;
     font-size: 64px;
     margin-bottom: 16px;
 }
-
+p{
+    font-family: 'Open Sans';
+}
 header a{
     color: #888888;
     margin-right: 16px;
@@ -46,7 +52,7 @@ form{
 input{
     box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
               3px 3px 5px rgba(0, 0, 0, 0.1);
-              font-family: 'Roboto', sans-serif;
+              font-family: 'Open Sans';
               color: #333;
               font-size: 1.2rem;
               padding: 1rem 2rem;
@@ -64,6 +70,7 @@ input:placeholder-shown{
     padding-left: 16px;
     color: #888888;
     text-decoration: none;
+    font-family: 'Open Sans';
 }
 input:focus{
     outline: none;
@@ -81,7 +88,12 @@ button{
     margin-top: 5%;
     font-size: 1.2rem;
     color: #333333;
+    font-family: 'Open Sans';
 }
 button:focus{
     outline: none;
+}
+p a{
+    text-decoration: none;
+    color: #333333;
 }
