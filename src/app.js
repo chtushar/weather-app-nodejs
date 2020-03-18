@@ -1,8 +1,8 @@
 const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
-const geocode = require('./utils/geocode');
-const forecast = require('./utils/forecast');
+const geocode = require("./utils/geocode");
+const forecast = require("./utils/forecast");
 
 const app = express();
 
@@ -41,44 +41,37 @@ app.get("/help", (req, res) => {
   });
 });
 
-
-
 app.get("/weather", (req, res) => {
+  if (!req.query.address) {
+    res.send({
+      error: "Please Enter a valid address"
+    });
+  } else {
+    geocode(
+      req.query.address,
+      (error, { latitude, longitude, location } = {}) => {
+        if (error) {
+          res.send({
+            error
+          });
+        }
 
-    if (!req.query.address) {
-        res.send({
-            error: "Please Enter a valid address"    
-        });
-    }else{
-        geocode(req.query.address, (error, {latitude, longitude, location} = {}) => {
-            if (error) {
-                res.send({
-                    error
-                })
-            }
-
-
-            forecast({latitude, longitude, location},(error, data) => {
-                        if (error) {
-                            res.send({
-                                error
-                            })
-                        }
-                        res.send({
-                            forecast: data,
-                            location: location,
-                            address: req.query.address
-                        });
+        forecast({ latitude, longitude, location }, (error, data) => {
+          if (error) {
+            res.send({
+              error
             });
-
-
-
+          }
+          res.send({
+            forecast: data,
+            location: location,
+            address: req.query.address
+          });
         });
-    }
-
+      }
+    );
+  }
 });
-
-
 
 app.get("*", (req, res) => {
   res.render("404", {
