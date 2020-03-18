@@ -12,6 +12,9 @@ body{
 }
 .main-content{
     flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 footer{
@@ -22,12 +25,39 @@ footer{
     font-family: 'Open Sans';
 }
 
+footer div:nth-child(2){
+    margin-top: 16px;
+    font-weight: 600;
+}
+
+ footer a{
+    color: #888888;
+    margin-right: 16px;
+    text-decoration: none;
+}
 header{
     margin-top: 16px;
     margin-bottom: 48px;
     text-align: center;
     font-family: 'Open Sans';
 }
+
+.location{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    height: 34px;
+}
+.location img{
+    height: 32px;
+    margin-right:8px;
+}
+
 h1{
     font-family: Montserrat;
     font-size: 64px;
@@ -47,10 +77,11 @@ form{
     flex-direction: column;
     align-items: center;
     margin: 0 auto;
+    width: 90%;
 }
 
 input{
-    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+              box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
               3px 3px 5px rgba(0, 0, 0, 0.1);
               font-family: 'Open Sans';
               color: #333;
@@ -80,11 +111,11 @@ button{
               3px 3px 5px rgba(0, 0, 0, 0.1);
     height: 4rem;
     background: #ebf5fc;
-    border-radius: 5px;
+    border-radius: 2rem;
     border: none;
     cursor: pointer;
     padding: 0rem 1rem;
-    width: 50%;
+    width: 40%;
     margin-top: 5%;
     font-size: 1.2rem;
     color: #333333;
@@ -96,4 +127,49 @@ button:focus{
 p a{
     text-decoration: none;
     color: #333333;
+}
+
+.output{
+    width: 90%;
+    height: 25rem;
+    box-shadow: -2px -2px 5px rgba(255, 255, 255, 1),
+              3px 3px 5px rgba(0, 0, 0, 0.1);
+    background: #ebf5fc;
+    border-radius: 2rem;
+    border: none;
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+.output-primary{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    flex-grow: 1;
+}
+.output-primary div{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+}
+.output-primary .temperature{
+    font-size: 6rem;
+}
+
+.forecast img{
+    height: 8rem;
+}
+
+.output-secondary{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.output-secondary div{
+    margin-left: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
 }
