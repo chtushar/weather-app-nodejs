@@ -192,4 +192,11 @@ p a{
      .output-primary .forecast img{
          height: 4rem;
      }
+     .output-secondary div:nth-child(1){
+         text-align: left;
+     }
+
+     .output-secondary div:nth-child(2){
+         text-align: right;
+     }
 }
