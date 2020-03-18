@@ -24,7 +24,7 @@ form.addEventListener("submit", e => {
                               <p class="location-text">${data.location.split(',')[0]}</p>`;
         outputPrimary.innerHTML = "";
         outputSecondary.innerHTML = "";
-        outputPrimary.innerHTML = `<div class="temperature">${data.forecast.temperature.toPrecision(3)}<sup style="font-size: 3rem;">&#8451;</sup></div>
+        outputPrimary.innerHTML = `<div class="temperature">${data.forecast.temperature.toPrecision(3)}<sup>&#8451;</sup></div>
                                    <div class="forecast"><img src="/img/icons/${data.forecast.icon}.svg"/></div>`;
         outputSecondary.innerHTML = `<div class="rain-prob">Rain Probability ${100*data.forecast.precipProbability.toPrecision(4)}%</div>
                                      <div class="wind-speed">Wind speed ${data.forecast.windSpeed} kmph</div>`;

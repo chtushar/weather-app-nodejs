@@ -36,8 +36,7 @@ footer div:nth-child(2){
     text-decoration: none;
 }
 header{
-    margin-top: 16px;
-    margin-bottom: 48px;
+    margin-bottom: 3rem;
     text-align: center;
     font-family: 'Open Sans';
 }
@@ -48,7 +47,7 @@ header{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-size: 32px;
+    font-size: 2rem;
     font-weight: 700;
     letter-spacing: 2px;
     height: 34px;
@@ -172,4 +171,25 @@ p a{
     margin-right: 1.5rem;
     font-size: 1rem;
     font-weight: 700;
+}
+
+
+@media only screen and (max-width: 600px) {
+    header{
+        margin-bottom: 2rem;
+    } 
+    .location{
+         margin-top: 1.5rem;
+         font-size: 1.5rem;
+         height: 1.6rem;
+     }
+     .output{
+         height: 20rem;
+     }
+     .output-primary .temperature{
+        font-size: 3rem;
+     }
+     .output-primary .forecast img{
+         height: 4rem;
+     }
 }
